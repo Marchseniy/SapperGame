@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сапер</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/main.js" defer type="module"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="game">
+			<header class="header">
+				<div class="header__bomb-count-panel panel">
+					<span class="header__bomb-count" data-bomb-count>10</span>
+					<img class="header__bomb-icon" src="img/bomb.svg" alt="" width="40px">
+				</div>
+				<div class="header__level-options-wrapper">
+					<select class="header__level-options panel" data-level-options-container></select>
+					<img src="img/arrow.svg" class="header__arrow-icon"></img>
+				</div>
+				<div class="header__time-panel panel">
+					<span class="header__time" data-timer-panel></span>
+				</div>
+			</header>
+			<main class="main">
+				<div class="main__board-wrapper">
+					<div class="main__board" data-board></div>
+					<div class="main__result-board" data-result-board></div>
+				</div>
+				<button class="main__new-game-btn" data-recreate-btn>Новая игра</button>
+			</main>
+		</div>
+	</div>
+
+	<template data-level-option>
+		<option class="header__level-options-item">Новичок 9x9</option>
+	</template>
+	<template data-cell-button>
+		<button class="main__cell" data-cell></button>
+	</template>
+	<template data-bomb>
+		<img src="img/bomb.svg" alt="" width="16vw">
+	</template>
+	<template data-flag>
+		<img src="img/flag.svg" alt="" width="15vw">
+	</template>
+	<template data-win-result-board>
+		<div class="result-board">
+			<div class="result-board__content">
+				<p class="result-board__title">Победа</p>
+				<p class="result-board__description">Затраченное время: <span data-total-time></span> сек.</p>
+				<img class="result-board__icon" src="img/star.svg" alt="" width="200px">
+			</div>
+		</div>	
+	</template>
+	<template data-louse-result-board>
+		<div class="result-board">
+			<div class="result-board__content">
+				<p class="result-board__title">Поражение</p>
+				<p class="result-board__description">Увы, вы подорвались</p>
+				<img class="result-board__icon" src="img/exploded.svg" alt="" width="200px">
+			</div>
+		</div>
+	</template>
+</body>
+
+</html>
