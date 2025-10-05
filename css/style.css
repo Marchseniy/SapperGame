@@ -284,7 +284,7 @@ body {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 	.result-board__icon {
 		width: max(8vh, 8vw);
 	}
@@ -297,5 +297,9 @@ body {
 	.result-board__description {
 		font-size: max(0.7vh, 0.7vw);
 		margin-bottom: 0.75vw;
+	}
+
+	.main__board {
+		width: calc(min(calc(100vmin * (var(--grid-columns) / var(--grid-rows))), 100vw) - var(--horizontal-padding))
 	}
 }
